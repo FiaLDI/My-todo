@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --main-color: rgb(157, 199, 247);
+    --font-color: #fff;
+    --border-color: rgb(47, 141, 248);
+    --button-hover-color:rgb(47, 141, 248);
+    --button-color: rgb(128, 185, 250);
+    --complete: rgb(122, 250, 149);
+    --noncomplete: rgb(250, 122, 122);
+}
+
+*, input, button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+}   
+
+body {
+    background-color: var(--main-color);
+    color: var(--font-color);
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+button {
+    background-color: var(--button-color);
+    cursor: pointer;
+    color: var(--font-color);
+    padding: 0.5em;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+}
+
+input {
+    background-color: var(--button-color);
+    color: var(--font-color);
+    font-size: 16px;
+    padding: 0.5em;
+    border: 1px solid var(--border-color);
+}
+
+h2 {
+    background-color: var(--border-color);
+    text-align: center;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+    gap: 4em;
+}
+
+select {
+    width: 100%;
+    height: 20px;
+}
+
+.input-container, input {
+    height: 100%;
+}
+
+header, .login-form, .auth {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--border-color);
+    align-items: center;
+}
+
+.title-page {
+    cursor: pointer;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.task-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    flex-wrap: wrap;
+    height: 100%;
+    gap: 0.5em;
+}
+
+.task-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em;
+    font-size: 18px;
+    width: 280px;
+    overflow:hidden;
+    box-shadow: 0px 0px 5px 1px var(--border-color);
+}
+
+.task-container {
+    padding: 1em;
+}
+
+.button-container, .button-container button,.task-form-add *, .task-container * {
+    width: 100%;
+}
+
+.task-form-add {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    box-shadow: 0px 0px 5px 1px var(--border-color);
+    gap: 1em;
+    padding: 1em;
+}
+
+.switchers {
+    position: absolute;
+    background-color: var(--border-color);
+    right: 0;
+    top: 0;
+}
+
+.theme-switcher {
+    white-space: pre-line;
+    width: 80px;
+}
+
+.completed {
+    box-shadow: 0px 0px 5px 1px var(--complete);
+}
+
+.uncompleted {
+    box-shadow: 0px 0px 5px 1px var(--noncomplete);
+}
